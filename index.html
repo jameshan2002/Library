@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Library</title>
+</head>
+
+<body>
+    <header>
+        <h1 style="font-size: 45px;">Library.</h1>
+        <p style="font-size: 17px;">Organize your books by clicking on the button!</p>
+    </header>
+    <!--End of header-->
+
+    <div id="options">
+        <button id="newBtn">Add a book</button>
+        <div id="popup">
+            <div class="model-content">
+                <span class="close">&times;</span>
+                <form id='form' action="Script.js">
+                    <div id='textInput'>
+                        <p><input type='text' id='title' name='title' placeholder='Title'></p>
+                        <p><input type='text' id='author' name='author' placeholder='Author'></p>
+                        <p><input type='text' id='pages' name='pages' placeholder='Pages'></p>
+                    </div>
+                    <div id='checkBox'>
+                        <p><label>Read: </label><input type='checkbox' id='read' name='read' value='yes'></p>
+                    </div>
+                    <button type='submit' form='form' id='addBtn'>Add</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--End of options-->
+
+    <script src="script.js"></script>
+</body>
+
+</html>
