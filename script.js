@@ -36,8 +36,9 @@ function addBookToLibrary() {
         return;
       }
 
-    popUpForm.style.display = 'none';
     event.preventDefault();
+    popUpForm.style.display = 'none';
+
     newBook = new Book(title, author, pages, read); 
     myLibrary.push(newBook); 
     updateLocalStorage();
@@ -51,8 +52,10 @@ function updateLocalStorage() {
 
 function render()
 {
-    myLibrary = JSON.parse(localStorage.getItem("myLibrary"));
-
+    if(localStorage.myLibrary) {
+        myLibrary = JSON.parse(localStorage.getItem("myLibrary"));
+    }
+    
     const display = document.getElementById('Library-container');
     const books = document.querySelectorAll('.book');
     books.forEach(book => display.removeChild(book));
