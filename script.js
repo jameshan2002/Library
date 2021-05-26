@@ -22,6 +22,7 @@ class Book {
 
 let myLibrary = [];
 let newBook;
+
 function addBookToLibrary() {
     if (title.value.length === 0 || author.value.length === 0) {
         alert("Please, fill all the fields");
@@ -56,7 +57,7 @@ function render()
     const books = document.querySelectorAll('.book');
     books.forEach(book => display.removeChild(book));
    
-    for (let i=0; i<myLibrary.length; i++){
+    for (let i=0; i < myLibrary.length; i++){
        createBook(myLibrary[i]);
     }
     
