@@ -56,8 +56,9 @@ function render()
     const display = document.getElementById('Library-container');
     const books = document.querySelectorAll('.book');
     books.forEach(book => display.removeChild(book));
-   
-    for (let i=0; i < myLibrary.length; i++){
+    
+    let arrayCount = myLibrary ? myLibrary.length : 0;
+    for (let i = 0; i < arrayCount; i++){
        createBook(myLibrary[i]);
     }
     
