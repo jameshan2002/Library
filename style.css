@@ -33,6 +33,7 @@ header {
 
 #newBtn:hover {
     background-color: #a963ff;
+    transform: scale(1.1);
 }
 
 @media all and (max-width:30em) {
@@ -114,12 +115,14 @@ header {
     font-weight: bold;
     line-height: 0;
     background-color: #212121;
+    transition: all 0.1s;
 }
 
 .close:hover, .close:focus {
     color: #9844ff;
     text-decoration: none;
     cursor: pointer;
+    transform: scale(1.1);
 }
 
 /*Books*/
@@ -167,18 +170,24 @@ header {
 
 .readBtn { 
   font-size: 15px;
-  height: 20px;
+  height: 23px;
   width: 90px;
   margin-bottom: 10px;
   border-radius: 10px;
+  transition: transform 0.1s;
   border: 0px;
 }
 
 #removeBtn {
   font-size: 14px;
-  height: 20px;
+  height: 23px;
   width: 75px;
   border-radius: 10px;
   border: 0px;
   background-color: #b49add;
+  transition: transform 0.1s;
+}
+
+.readBtn:hover, #removeBtn:hover {
+    transform: scale(1.05);
 }
