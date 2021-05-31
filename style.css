@@ -14,6 +14,40 @@ header {
     text-align: center;
 }
 
+
+.user {
+    display: inline-block;
+}
+
+.sign-in {
+    border: none;
+    outline: none;
+    display: inline-block;
+    padding: 0.5em 1.2em;
+    margin: 0 6.5em 0.3em 0;
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 300;
+    color: #FFFFFF;
+    background-color: #d8801c;
+    text-align: center;
+    transition: all 0.2s;
+    font-size: 16px;
+}
+
+.sign-in:hover {
+    background-color: #bb5908;
+    transform: scale(1.1);
+}
+
+@media all and (max-width:30em) {
+    .sign-in {
+        display: block;
+        margin: 0.2em auto;
+    }
+}
+
 #newBtn {
     border: none;
     outline: none;

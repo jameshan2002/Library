@@ -17,7 +17,10 @@
     <!--End of header-->
 
     <div id="options">
-        <button id="newBtn">Add a book</button>
+        <div class="user">
+            <button class="sign-in">Sign In</button>
+            <button id="newBtn">Add a book</button>
+        </div>
         <div id="popup">
             <div class="model-content">
                 <span class="close">&times;</span>
@@ -37,7 +40,13 @@
     </div>
     <!--End of options-->
     <div id="Library-container"></div>
+
     <script src='script.js'></script>
+    <script src="firebaseInit.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-analytics.js"></script>
 </body>
 
 </html>
