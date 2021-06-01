@@ -24,7 +24,7 @@ let myLibrary = [];
 let newBook;
 
 function addBookToLibrary() {
-    if (title.value.length === 0 || author.value.length === 0) {
+    if (title.value.length === 0 || author.value.length === 0 || pages.value.length === 0) {
         alert("Please, fill all the fields");
         event.preventDefault();
         return;
@@ -43,8 +43,15 @@ function addBookToLibrary() {
     myLibrary.push(newBook); 
     updateLocalStorage();
     render();
-    form.reset();   
+    form.reset();
 }
+
+function updateFirebase() {
+    let firebaseRef = firebase.database().ref();
+    let titleing = title.value;
+    firebaseRef.child("text").set(titleing);
+}
+
 
 function updateLocalStorage() {
     localStorage.setItem("myLibrary", JSON.stringify(myLibrary));
@@ -108,6 +115,7 @@ function createBook(item) {
     bookDiv.appendChild(removeBtn);
     
     library.appendChild(bookDiv);
+
 
     removeBtn.addEventListener('click', () => {
         myLibrary.splice(myLibrary.indexOf(item),1);
