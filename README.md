@@ -2,7 +2,7 @@
 
  Library app that operates using Javascript and has local storage to store the user's memory. 
  
- - [Check Demo](https://jameshan2002.github.io/Library/)
+ - [Check Demo](https://notjameshan.github.io/Library/)
  
  Description
  - You can store books by putting your input on the input box.
